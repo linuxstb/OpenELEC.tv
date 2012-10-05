@@ -1,0 +1,47 @@
+################################################################################
+#      This file is part of OpenELEC - http://www.openelec.tv
+#      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
+#
+#  This Program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2, or (at your option)
+#  any later version.
+#
+#  This Program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with OpenELEC.tv; see the file COPYING.  If not, write to
+#  the Free Software Foundation, 51 Franklin Street, Suite 500, Boston, MA 02110, USA.
+#  http://www.gnu.org/copyleft/gpl.html
+################################################################################
+
+PKG_NAME="pidvbip"
+PKG_VERSION="0.1"
+PKG_REV="1"
+PKG_ARCH="any"
+PKG_LICENSE="GPL"
+PKG_SITE="https://github.com/linuxstb/pidvbip/"
+PKG_SOURCE_NAME="$PKG_NAME-$PKG_VERSION.tar.gz"
+PKG_URL="http://localhost/$PKG_NAME-$PKG_VERSION.tar.gz"
+PKG_DEPENDS="faad2 mpg123 a52dec freetype"
+PKG_BUILD_DEPENDS="toolchain faad2 mpg123 a52dec freetype"
+PKG_PRIORITY="optional"
+PKG_SECTION="mediacenter"
+PKG_SHORTDESC="pidvbip: DVB-over-IP streaming client for the Raspberry Pi"
+PKG_LONGDESC="pidvbip: DVB-over-IP streaming client for the Raspberry Pi"
+PKG_IS_ADDON="no"
+
+PKG_AUTORECONF="no"
+
+if [ "$AVAHI_DAEMON" = yes ]; then
+  PKG_BUILD_DEPENDS="$PKG_BUILD_DEPENDS avahi"
+  PKG_DEPENDS="$PKG_DEPENDS avahi"
+fi
+
+if [ "$OPENMAX_SUPPORT" = yes ]; then
+  PKG_BUILD_DEPENDS="$PKG_BUILD_DEPENDS $OPENMAX"
+  PKG_DEPENDS="$PKG_DEPENDS $OPENMAX"
+fi
