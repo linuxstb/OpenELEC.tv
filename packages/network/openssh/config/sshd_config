@@ -19,11 +19,11 @@
 #Protocol 2
 
 # HostKey for protocol version 1
-#HostKey ~/.cache/ssh/ssh_host_key
+#HostKey /var/cache/ssh/ssh_host_key
 # HostKeys for protocol version 2
-HostKey ~/.cache/ssh/ssh_host_rsa_key
-HostKey ~/.cache/ssh/ssh_host_dsa_key
-#HostKey ~/.cache/ssh/ssh_host_ecdsa_key
+HostKey /var/cache/ssh/ssh_host_rsa_key
+HostKey /var/cache/ssh/ssh_host_dsa_key
+#HostKey /var/cache/ssh/ssh_host_ecdsa_key
 
 # Lifetime and size of ephemeral version 1 server key
 #KeyRegenerationInterval 1h
