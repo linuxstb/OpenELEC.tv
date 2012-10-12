@@ -23,23 +23,22 @@
 #
 # runlevels: openelec, textmode
 
-if [ -d /usr/config ]; then
+if [ -d /usr/config ] ; then
   progress "copy userconfig and samples"
-
-    cd /usr/config
-    mkdir -p /storage/.config
-
-    for dir in `find . -type d`; do
-      mkdir -p /storage/.config/$dir
-    done
-
-    for config in `find . -type f -not -name "*.sample"`; do
-      if [ ! -f /storage/.config/$config ]; then
-        cp $config /storage/.config/$config
-      fi
-    done
-
-    for sample in `find . -type f -name "*.sample"`; do
-      cp $sample /storage/.config/$sample
-    done
+#    cd /usr/config
+#    mkdir -p /storage/.config
+#
+#    for dir in `find . -type d`; do
+#      mkdir -p /storage/.config/$dir
+#    done
+#
+#    for config in `find . -type f -not -name "*.sample"`; do
+#      if [ ! -f /storage/.config/$config ]; then
+#        cp $config /storage/.config/$config
+#      fi
+#    done
+#
+#    for sample in `find . -type f -name "*.sample"`; do
+#      cp $sample /storage/.config/$sample
+#    done
 fi
