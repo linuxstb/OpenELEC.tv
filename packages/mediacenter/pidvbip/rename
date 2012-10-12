@@ -1,4 +1,4 @@
 . config/options $1
 
 cd $BUILD
-mv linuxstb-$PKG_NAME-$PKG_VERSION $PKG_NAME-$PKG_VERSION
+mv linuxstb-$PKG_NAME-* $PKG_NAME-$PKG_VERSION
