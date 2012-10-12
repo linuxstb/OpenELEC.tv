@@ -19,13 +19,13 @@
 ################################################################################
 
 PKG_NAME="pidvbip"
-PKG_VERSION="0.1"
+PKG_VERSION="d54f0d4"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="https://github.com/linuxstb/pidvbip/"
 PKG_SOURCE_NAME="$PKG_NAME-$PKG_VERSION.tar.gz"
-PKG_URL="http://localhost/$PKG_NAME-$PKG_VERSION.tar.gz"
+PKG_URL="https://github.com/linuxstb/pidvbip/tarball/$PKG_VERSION"
 PKG_DEPENDS="faad2 mpg123 a52dec freetype"
 PKG_BUILD_DEPENDS="toolchain faad2 mpg123 a52dec freetype"
 PKG_PRIORITY="optional"
