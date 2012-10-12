@@ -50,7 +50,7 @@ done
 printf "%${INDENT}c UNPACK   $1\n" ' '>&$SILENT_OUT
 export INDENT=$((${INDENT:-1}+$INDENT_SIZE))
 
-rm -rf $BUILD/$1[-_][0-9]*
+rm -rf $BUILD/$1[-_][0-9a-z]*
 rm -rf $BUILD/$1[-_]r[0-9]*
 rm -rf $BUILD/$1[-_]cvs*
 rm -rf $BUILD/$1[-_]svn*

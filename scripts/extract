@@ -31,7 +31,12 @@ fi
 [ ! -d "$SOURCES/$1" -o ! -d "$3" ] && exit 1
 
 for i in $PKG_URL; do
-  FILE="`basename $i`"
+  if [ -n "$PKG_SOURCE_NAME" ]
+  then
+    FILE=$PKG_SOURCE_NAME
+  else
+    FILE="`basename $i`"
+  fi
 
   case $FILE in
   $2)
